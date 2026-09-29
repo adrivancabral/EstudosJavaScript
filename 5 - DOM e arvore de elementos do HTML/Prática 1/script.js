@@ -10,4 +10,12 @@ let city = document.querySelector('#city');
 city.textContent = 'Maricá';
 console.log(city);
 
+let button = document.querySelector('.button');
+console.log(button);
+// button.addEventListener('click', function(){ // Adiciona uma função ao botão
+  //  title.textContent = 'Olá, Adrivan!'
+  // message.textContent = 'O botão foi clicado!'
+  //  city.textContent = 'Rio de Janeiro'
+ //});
 
+ 
