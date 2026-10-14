@@ -26,4 +26,9 @@ expenseForm.addEventListener('submit', function(event) {
 
 //
 
- 
+let category = document.querySelector('#category');
+let selectedCategory = document.querySelector('#selectedCategory');
+
+category.addEventListener('change', function(){
+    selectedCategory.innerText = category.value;
+});
