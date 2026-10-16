@@ -1,0 +1,22 @@
+* , *::before , *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+}
+
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
