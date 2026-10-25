@@ -41,9 +41,43 @@ console.log(purchaseDate2.toLocaleString('pt-BR')); // Esse forma é mais simple
 
 let purchaseDate3 = new Date(2025, 5, 9);
 let formattedDate = purchaseDate3.toLocaleString('pt-BR', {
-    day: '2-digit',
-    month: 'long',
-    year: 'numeric'
+    day: '2-digit', // dia com dois digitos 
+    month: 'long', // nome completo do mes ('short' voltaria o nome abreviado do mes e '2-digit' voltaria o mes com dois digitos)
+    year: 'numeric' //  ano numérico
 });
 
 console.log(formattedDate); // dessa forma ele retorna "09 de junho de 2025"
+
+let date = new Date(2025, 9, 5);
+date.setFullYear(2026); // alterou o ano da data para 2026, existe para cada um setMonth(), setDate(), setHours(), setMinutes(), setSeconds()
+console.log(date.toLocaleDateString('pt-BR'));
+
+let date1 = new Date(2025, 9, 5);
+date1.setDate(16); // altera o dia
+console.log(date1.toLocaleDateString('pt-BR'));
+
+let date2 = new Date(2025, 0, 31);
+date2.setDate(32); // automaticamente o javascript ajusta a data quando foge do padrão de datas
+console.log(date2.toLocaleDateString('pt-BR'));
+
+let firstDate = new Date(2025, 9, 5);
+let secondDate = new Date(2025, 9, 20);
+console.log(firstDate < secondDate); // pergunta se first é menor que second = verdadeiro 
+console.log(firstDate > secondDate); // pergunta se first é maior que second = falso
+console.log(firstDate.getTime() === secondDate.getTime()); // pergunta se as duas datas são iguais = falso
+// o metodo getTime retorna o numero de milisegundos desde 1° de janeiro de 1970 até o instante representado pelo objeto
+
+let expenseDate = new Date(2025, 9, 5);
+let limitDate = new Date(2025, 9, 10);
+if (expenseDate < limitDate) {
+    console.log('A despesa aconteceu antes da data limite.')
+} else {
+    console.log('A despesa aconteceu na data limite ou depois dela.');
+}
+
+//Diferença entre duas datas
+let startDate = new Date(2025, 9, 1);
+let endDate = new Date(2025, 9, 11);
+let difference = endDate.getTime() - startDate.getTime();
+let days = difference / (1000 * 60 * 60 * 24); // respectivamente de milissegunos -> segundos -> minutos -> horas -> dias
+console.log(days);
