@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenny Grana - Cadastro de despesas</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Lenny Grana</h1>
+    <h2>Cadastrar despesa</h2>
+    <form id="expenseForm">
+        <label for="expenseName">Nome da despesa:</label>
+        <input type="text" id="expenseName">
+        <br><br>
+        <label for="expenseAmount">Valor:</label>
+        <input type="number" id="expenseAmount" step="0.01">
+        <br><br>
+        <label for="category">Categoria:</label>
+        <select id="category">
+            <option value="Casa">Casa</option>
+            <option value="Carro">Carro</option>
+            <option value="Alimentação">Alimentação</option>
+            <option value="Saúde">Saúde</option>
+        </select>
+        <br><br>
+        <button type="submit">Cadastrar despesa</button>
+    </form>
+    <p id="message"></p>
+</body>
+</html>
