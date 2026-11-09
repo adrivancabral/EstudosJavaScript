@@ -33,4 +33,20 @@ console.log('Iniciando tarefa...');
 setTimeout(tarefaConcluida, 2000); // funciona como um callback, será executado depois do tempo programado
 console.log('Executando outras tarefas...');
 
-// Promises: Promessas de que algo será concluído
+// Promises: Promessas de que algo será concluído 
+
+let tarefa = new Promise(function(resolve, reject) { // cria uma nova promessa
+    let sucesso = true; // variável criada para simular o resultado 
+    if (sucesso) {
+        resolve('Operação concluída!'); // informa que a operação foi concluída com sucesso 
+    } else {
+        reject('Ocorreu um erro!'); // informa que a operação falhou 
+    }
+});
+tarefa 
+    .then(function(result) { // executa quando a promessa é resolvida 
+        console.log(result);
+    })
+    .catch(function(error) { // executa quando a promessa é rejeitada 
+        console.log(error);
+    });
