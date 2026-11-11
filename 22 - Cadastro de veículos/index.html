@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de veículos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Cadastro de Veículos</h1>
+        <form id="form-veiculo">
+            <input type="text" id="marca" placeholder="Marca" required>
+            <input type="text" id="modelo" placeholder="Modelo" required>
+            <input type="number" id="ano" placeholder="Ano" required>
+            <input type="text" id="placa" placeholder="Placa" required>
+            <input type="text" id="cor" placeholder="Cor" required>
+            <input type="number" id="quilometragem" placeholder="Quilometragem" min="0" required>
+            <button type="submit">Cadastrar veículo</button>
+        </form>
+        <p id="mensagem"></p>
+        <h2>Veículos cadastrados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Ano</th>
+                    <th>Placa</th>
+                    <th>Cor</th>
+                    <th>Quilometragem</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="lista-veiculos"></tbody>
+        </table>
+    </main>
+</body>
+</html>
