@@ -17,7 +17,8 @@
             <input type="text" id="placa" placeholder="Placa" required>
             <input type="text" id="cor" placeholder="Cor" required>
             <input type="number" id="quilometragem" placeholder="Quilometragem" min="0" required>
-            <button type="submit">Cadastrar veículo</button>
+            <button type="submit" id="botao-enviar">Cadastrar veículo</button>
+            <button type="button" id="botao-cancelar" hidden>Cancelar edição</button> 
         </form>
         <p id="mensagem"></p>
         <h2>Veículos cadastrados</h2>
@@ -30,7 +31,6 @@
                     <th>Placa</th>
                     <th>Cor</th>
                     <th>Quilometragem</th>
-                    <th>Ação</th>
                 </tr>
             </thead>
             <tbody id="lista-veiculos"></tbody>
